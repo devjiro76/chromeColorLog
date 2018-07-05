@@ -1,8 +1,8 @@
 export default function (arg) {
-  const argType = () => Object.prototype.toString.call(arguments[0])
+  const argType = (arg) => Object.prototype.toString.call(arg)
 
-  const htmlDecode = (input) => {
-    const doc = new DOMParser().parseFromString(input, "text/html")
+  const htmlDecode = (char) => {
+    const doc = new DOMParser().parseFromString(char, "text/html")
     return doc.documentElement.textContent
   }
 
@@ -36,15 +36,15 @@ export default function (arg) {
     if (spanArray.length) {
       const tags = []
       const contents = []
-      var startTagRe = /<span\s+style=(['"])([^'"]*)\1\s*>(.*?)<\/span>/gi
+      var reg = /<span\s+style=(['"])([^'"]*)\1\s*>(.*?)<\/span>/gi
 
-      for (var i = 0, l = spanArray.length; i < l; i++) {
-        tags.push(spanArray[i].replace(startTagRe, '%c%s%c'))
+      for (let i = 0, l = spanArray.length; i < l; i++) {
+        tags.push(spanArray[i].replace(reg, '%c%s%c'))
 
-        var reResultArray
-        while (reResultArray = startTagRe.exec(spanArray[i])) {
-          contents.push(reResultArray[2])
-          contents.push(reResultArray[3] === " " ? " " : htmlDecode(reResultArray[3]))
+        let parsed
+        while (parsed = reg.exec(spanArray[i])) {
+          contents.push(parsed[2])
+          contents.push(parsed[3] === " " ? " " : htmlDecode(parsed[3]))
           contents.push('')
         }
 
