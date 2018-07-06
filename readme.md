@@ -1,5 +1,7 @@
 # chromeColorLog
 
+**Demo**: https://devjiro76.github.io/chromeColorLog/
+
 Let's say there is `<pre>` tag which contains `<span>` like below.
 ```
 <pre>
