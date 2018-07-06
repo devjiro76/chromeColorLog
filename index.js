@@ -7,7 +7,7 @@ new Vue({
     <div>
       <input type="file" @change="fileChange" />
       <div>
-        <pre>{{ ascii }}</pre>
+        <pre v-html="ascii"></pre>
       </div>
     </div>
   `,
