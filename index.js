@@ -25,7 +25,7 @@ new Vue({
       const asiiImage = new asciiConverter(url)
 
       asiiImage.get({
-        targetWidth: 100,
+        targetWidth: 120,
       })
         .then(res => {
           chromeColorLog(res)
