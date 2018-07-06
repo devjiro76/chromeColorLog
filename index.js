@@ -5,7 +5,7 @@ new Vue({
   el: "#app",
   template: `
     <div>
-      <input type="file" @change="fileChange" />
+      <input type="file" @change="fileChange" accept="image/*" />
       <div>
         <pre v-html="ascii"></pre>
       </div>
