@@ -1,7 +1,3 @@
-import * as _aalib from './aalib.js'
-
-const aalib = _aalib.aalib
-
 export default class {
   constructor(src) {
     this.src = src
