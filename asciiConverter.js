@@ -57,7 +57,6 @@ export default class {
     }, _option)
     let ratio = 1
 
-    console.log('getRatio: ', option)
     if (option.ratio) {
       ratio = option.ratio
     } else if (option.targetWidth) {
