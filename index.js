@@ -27,7 +27,7 @@ new Vue({
       asiiImage.get()
         .then(res => {
           chromeColorLog(res)
-          self.ascii1 = res.innerHTML
+          self.ascii = res.innerHTML
         })
     }
   }
