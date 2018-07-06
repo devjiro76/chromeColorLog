@@ -1,3 +1,5 @@
+const aalib = window.aalib
+
 export default class {
   constructor(src) {
     this.src = src
