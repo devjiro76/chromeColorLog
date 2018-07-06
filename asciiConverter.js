@@ -1,4 +1,6 @@
-import * as aalib from './aalib.js'
+import * as _aalib from './aalib.js'
+
+const aalib = _aalib.aalib
 
 export default class {
   constructor(src) {
