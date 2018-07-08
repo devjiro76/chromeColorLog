@@ -25,7 +25,7 @@ export default function (arg) {
           tempArray = param.innerHTML.split(/\r|\n/)
           break
       }
-    } else if (param instanceof String) {
+    } else if (typeof (param) === "string") {
       tempArray = param.split(/\r|\n/)
     }
 
